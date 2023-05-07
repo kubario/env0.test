@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env0-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: env0-hello-world
+  template:
+    metadata:
+      labels:
+        app: env0-hello-world
+    spec:
+      containers:
+        - name: hello-world
+          image: alpine
+          command: ["/bin/sh"]
+          args: ["-c", "echo 'hello world'"]
+
