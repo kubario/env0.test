@@ -15,7 +15,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "terraform-test"
+  name     = "terraform-test-02"
   location = "westus2"
 }
 
